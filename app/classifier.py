@@ -30,7 +30,7 @@ with open('./static/permissions.txt', 'r') as f:
 def classify(file, ch):
     vector = {}
     result = 0
-    name, sdk, size = 'unknown', 'unknown', 'unknown'
+    name, sdk, size = 'unknown', 'unknown', 'unknown'  #Initializing the values to unknown. We can also use use name,sdk,size = "","",""
     app = APK(file)
     perm = app.get_permissions()
     name, sdk, size = meta_fetch(file)
